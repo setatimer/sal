@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sal's Garage</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.hero {
+    min-height: 90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #111;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ff9900;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #ff9900;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact {
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 8px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SAL'S GARAGE</div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO IMAGE -->
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Trusted Auto Repair</h1>
+
+        <p>
+        Professional Service • Honest Pricing • Quality Work
+        </p>
+
+        <a href="#contact" class="btn">Get A Quote</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Sal's Garage</h2>
+
+    <div class="about">
+
+        <img
+        src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1000&q=85"
+        alt="Automotive repair workshop"
+        loading="lazy">
+
+        <div>
+            <h3>Family Owned Auto Repair</h3>
+            <br>
+
+            <p>
+            Sal's Garage provides dependable automotive repair,
+            maintenance, diagnostics, brakes, suspension, engine
+            services, and more.
+            </p>
+
+            <br>
+
+            <p>
+            Our goal is to provide honest service and quality repairs
+            that keep customers coming back.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Engine Diagnostics</h3>
+            <p>Advanced troubleshooting and repairs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Brake Service</h3>
+            <p>Brake inspections, pads, rotors and repairs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Oil Changes</h3>
+            <p>Quick maintenance services for all makes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Suspension</h3>
+            <p>Shocks, struts, steering, and alignment services.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section id="gallery">
+
+    <h2 class="section-title">Our Shop</h2>
+
+    <div class="gallery">
+
+        <img
+        src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=85"
+        alt="Car engine repair"
+        loading="lazy">
+
+        <img
+        src="https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=900&q=85"
+        alt="Automotive workshop"
+        loading="lazy">
+
+        <img
+        src="https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=900&q=85"
+        alt="Automotive mechanic working"
+        loading="lazy">
+
+        <img
+        src="https://images.unsplash.com/photo-1632823471565-1ecdf5c1c7d5?auto=format&fit=crop&w=900&q=85"
+        alt="Automobile maintenance"
+        loading="lazy">
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <p>Sal's Garage</p>
+    <br>
+
+    <p>Professional Auto Repair Services</p>
+    <br>
+
+    <p>Call Today For Service</p>
+
+</section>
+
+<footer>
+    © 2026 Sal's Garage. All Rights Reserved.
+</footer>
+
+</body>
+</html>
